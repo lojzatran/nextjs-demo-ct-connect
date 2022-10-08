@@ -6,7 +6,7 @@ export default function Integrations() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch('/api/integrations')
+      const response = await fetch(`${process.env.CONNECT_API_URL}/integrations`)
       const responseJson = await response.json()
       setIntegrations(responseJson)
     })()
